@@ -9,18 +9,18 @@
 # version: 1.0
 
 import re
-import sys
 import subprocess
+from graficas import graficar
 
-p = subprocess.Popen(
+process = subprocess.Popen(
     "free | head -2 | tail -1",
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     shell=True
 )
-p.wait()
+process.wait()
 
-mem_info = p.stdout.read().decode()
+mem_info = process.stdout.read().decode()
 mem_info = re.sub(" +", " ", mem_info).split()[1:3]
 
 mem_total = float(mem_info[0])
@@ -35,12 +35,4 @@ free_info = ['Libre: %d' % mem_free, free_avg]
 
 output = "{0},\n\t\t{1}".format(used_info, free_info)
 
-print(output)
-
-try:
-    with open("js/donut-ram.js", "w") as grafica:
-        with open("templates/donut-ram.js", "r") as template:
-            archivo = template.read().replace("$value_here$", str(output))
-        grafica.write(archivo)
-except:
-    pass
+graficar("donut-ram.js", output)
