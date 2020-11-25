@@ -13,16 +13,12 @@ process = subprocess.Popen(
 process.wait()
 
 cpu_info = process.stdout.read().decode().split(" ")
-cpu_final = float(cpu_info[0]) *10
-cpu_final1 = float(cpu_info[1]) *10
-cpu_final2 = float(cpu_info[2]) *10
+cpu_final = float(cpu_info[0]) * 10
+cpu_final1 = float(cpu_info[1]) * 10
+cpu_final2 = float(cpu_info[2]) * 10
 
-cadena = """
-    ['1 minuto ', %f ],
-    ['5 minuto ', %f ],
-    ['15 minuto ', %f ]
-    
-    """ %(cpu_final, cpu_final1, cpu_final2)
+cadena = """['1 minuto', %f],
+        ['5 minuto', %f],
+        ['15 minuto', %f]""" % (cpu_final, cpu_final1, cpu_final2)
 
 graficar("gauge-cpu.js", cadena)
-

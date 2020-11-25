@@ -16,12 +16,12 @@
 
 <body>
 	<!-- Divs -->
-	<div id="piechart_3d" style="width: 400px; height: 300px;"></div>
+	<div id="piechart_3d" style="width: 400px; height: 250px;"></div>
 	<div id="chart_div" style="width: 400px; height: 120px;"></div>
 	
 	<!-- PHP calls -->
-	<?php exec ("scripts/ram.py", $salida) ?>
-	<?php exec ("scripts/cpu.py", $salida) ?>
+	<?php exec("scripts/ram.py") ?>
+	<?php exec("scripts/cpu.py") ?>
 </body>
 
 </html>
