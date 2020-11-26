@@ -13,9 +13,20 @@ process = subprocess.Popen(
 process.wait()
 
 cpu_info = process.stdout.read().decode().split(" ")
-cpu_final = float(cpu_info[0]) * 10
-cpu_final1 = float(cpu_info[1]) * 10
-cpu_final2 = float(cpu_info[2]) * 10
+
+process = subprocess.Popen(
+    "nproc --all",
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE,
+    shell=True
+)
+process.wait()
+
+cores = int(process.stdout.read().decode())
+
+cpu_final = float(cpu_info[0]) * 100 / cores
+cpu_final1 = float(cpu_info[1]) * 100 / cores
+cpu_final2 = float(cpu_info[2]) * 100 / cores
 
 cadena = """['1 minuto', %f],
         ['5 minuto', %f],
