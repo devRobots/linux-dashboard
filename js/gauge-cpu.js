@@ -5,9 +5,9 @@ function drawChart() {
 
 	var data = google.visualization.arrayToDataTable([
 		['Label', 'Value'],
-		['1 minuto', 12.600000],
-        ['5 minuto', 13.000000],
-        ['15 minuto', 17.700000]
+		['1 minuto', 5.200000],
+        ['5 minuto', 4.500000],
+        ['15 minuto', 10.500000]
 	]);
 
 	var options = {

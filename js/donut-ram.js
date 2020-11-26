@@ -3,8 +3,8 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 	var data = google.visualization.arrayToDataTable([
 		['MB', 'Porcentaje'],
-		['Usada: 2010244k', 50.886069540916544],
-		['Libre: 1940236k', 49.113930459083456]
+		['Usada: 2208492k', 55.904396427775865],
+		['Libre: 1741988k', 44.095603572224135]
 	]);
 
 	var options = {
