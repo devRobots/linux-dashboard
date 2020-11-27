@@ -31,6 +31,6 @@ for i in range(len(lista)-1):
             salida += "'" + linea[j] + "'"
             if j < len(linea):
                 salida += ","
-    salida += "],"
+    salida += "],\n\t\t"
 
 graficar("table-user.js", salida)
