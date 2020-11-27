@@ -55,7 +55,7 @@
 						<strong>Lista de usuarios</strong>
 					</div>
 					<div class="card-body">
-						<!--  -->
+						<div id="table_div"></div>
 					</div>
 				</div>
 			</div>
