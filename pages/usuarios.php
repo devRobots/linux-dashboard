@@ -44,7 +44,35 @@
 						<strong>Usuario nuevo</strong>
 					</div>
 					<div class="card-body ">
-						<!--  -->
+						<form action="../php/crearUsuario.php">
+							<div class="form-group">
+								<label for="txtUsuario">Nombre de usuario</label>
+								<input type="name" class="form-control form-control-sm" id="txtUsuario" name="txtUsuario" required>
+							</div>
+							<div class="form-group">
+								<label for="txtContraseña">Contraseña</label>
+								<input type="password" class="form-control form-control-sm" id="txtContraseña" name="txtContraseña" required>
+							</div>
+							<div class="form-group">
+								<label for="txtDescripcion">Descripcion</label>
+								<input type="textarea" class="form-control form-control-sm" id="txtDescripcion" name="txtDescripcion">
+							</div>
+							<div class="form-group">
+								<label for="cmbShell">Shell</label>
+								<select class="form-control form-control-sm" id="cmbShell" name="cmbShell">
+									<option>/bin/bash</option>
+									<option>/bin/sh</option>
+									<option>/bin/false</option>
+								</select>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="checkHome" name="checkHome">
+								<label class="form-check-label" for="radHome">
+									Crear home
+								</label>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -57,10 +85,10 @@
 						<div id="table_div"></div>
 					</div>
 				</div>
+				<div class="row justify-content-center my-md-3">
+					<span id="date" class="text-black-50"></span>
+				</div>
 			</div>
-		</div>
-		<div class="row justify-content-center py-md-1">
-			<span id="date" class="text-black-50"></span>
 		</div>
 	</div>
 
