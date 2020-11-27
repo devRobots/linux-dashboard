@@ -25,12 +25,14 @@ usuarios = process.stdout.read().decode()
 lista = usuarios.split("\n")
 for i in range(len(lista)-1):
     linea = lista[i].split(':')
-    salida += "["
-    for j in range(len(linea)):
-        if j != 1:
-            salida += "'" + linea[j] + "'"
-            if j < len(linea):
-                salida += ","
-    salida += "],\n\t\t"
+    if int(linea[2]) >= 1000:
+        salida += "["
+        for j in range(len(linea)):
+            if j != 1:
+                salida += "'" + linea[j] + "'"
+                if j < len(linea):
+                    salida += ","
+        salida += "],\n\t\t"
+
 
 graficar("table-user.js", salida)
