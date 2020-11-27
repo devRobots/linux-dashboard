@@ -12,22 +12,25 @@ import subprocess
 from graficas import graficar
 
 process = subprocess.Popen(
-    "getent passwd {1000..2000}",
+    "cat /etc/passwd",
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     shell=True
 )
 process.wait()
 
-salida = ""
+salida = ''
 usuarios = process.stdout.read().decode()
 
-lista = usuarios.splitlines()
-for info in lista:
-    linea = info.split(':')
+lista = usuarios.split("\n")
+for i in range(len(lista)-1):
+    linea = lista[i].split(':')
     salida += "["
-    for cosa in linea:
-        salida += "'"+ cosa +"',"
+    for j in range(len(linea)):
+        if j != 1:
+            salida += "'" + linea[j] + "'"
+            if j < len(linea):
+                salida += ","
     salida += "],"
 
 graficar("table-user.js", salida)
