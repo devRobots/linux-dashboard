@@ -11,8 +11,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 	<!-- Scripts de Graficas -->
-	<script type="text/javascript" src="../js/donut-ram.js"></script>
-	<script type="text/javascript" src="../js/gauge-cpu.js"></script>
+	<script type="text/javascript" src="../js/table-user.js"></script>
 </head>
 
 <body>
