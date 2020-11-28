@@ -8,7 +8,7 @@ $home = $_GET["checkHome"];
 exec("openssl passwd " . $clave, $claveCifrada);
 
 $comando = "sudo useradd " . $usuario;
-$comando = $comando . " -p " . $claveCifrada;
+$comando = $comando . " -p " . $claveCifrada[0];
 $comando = $comando . " -s " . $shell;
 
 if (!empty($descripcion)) {
