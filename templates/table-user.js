@@ -19,6 +19,11 @@ function drawTable() {
 
     google.visualization.events.addListener(table, 'select', function () {
         console.log(values[table.getSelection()[0].row]);
+        var modal = $('#modalUsuario');
+        modal.modal('show');
+        modal.on('hidden.bs.modal', function (e) {
+            location.reload()
+        });
     });
 
     table.draw(data, { showRowNumber: true, width: '100%', height: '100%' });
