@@ -14,7 +14,7 @@ $comando = $comando . " -s " . $shell;
 if (!empty($descripcion)) {
     $comando = $comando . " -c " . $descripcion;
 }
-if (empty($home)) {
+if (!isset($home)) {
     $comando = $comando . " -M ";
 }
 
