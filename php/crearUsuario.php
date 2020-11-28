@@ -1,18 +1,20 @@
 <?php
 $usuario = $_GET["txtUsuario"];
-$contrasenia = $_GET["txtContraseña"];
+$clave = $_GET["txtContraseña"];
 $descripcion = $_GET["txtDescripcion"];
 $shell = $_GET["cmbShell"];
 $home = $_GET["checkHome"];
 
+exec("openssl passwd " . $clave, $claveCifrada);
+
 $comando = "sudo useradd " . $usuario;
-$comando = $comando . " -p " . $contrasenia;
+$comando = $comando . " -p " . $claveCifrada;
 $comando = $comando . " -s " . $shell;
 
-if ($descripcion) {
+if (!empty($descripcion)) {
     $comando = $comando . " -c " . $descripcion;
 }
-if ($home) {
+if (empty($home)) {
     $comando = $comando . " -M ";
 }
 
