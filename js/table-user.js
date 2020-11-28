@@ -2,6 +2,13 @@ google.charts.load('current', { 'packages': ['table'] });
 google.charts.setOnLoadCallback(drawTable);
 
 function drawTable() {
+    var values = [
+        ['nobody','65534','65534','nobody','/nonexistent','/usr/sbin/nologin',],
+		['devrobot','1000','1000','Yesid Rosas Toro','/home/devrobot','/bin/zsh',],
+		['yes','1001','1001','asdasd','/home/yes','/bin/bash',],
+		
+    ]
+
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Nombre');
     data.addColumn('string', 'Id');
@@ -9,11 +16,13 @@ function drawTable() {
     data.addColumn('string', 'descripcion');
     data.addColumn('string', 'Home');
     data.addColumn('string', 'Shell');
-    data.addRows([
-        ['root','0','0','root','/root','/bin/bash',],['daemon','1','1','daemon','/usr/sbin','/usr/sbin/nologin',],['bin','2','2','bin','/bin','/usr/sbin/nologin',],['sys','3','3','sys','/dev','/usr/sbin/nologin',],['sync','4','65534','sync','/bin','/bin/sync',],['games','5','60','games','/usr/games','/usr/sbin/nologin',],['man','6','12','man','/var/cache/man','/usr/sbin/nologin',],['lp','7','7','lp','/var/spool/lpd','/usr/sbin/nologin',],['mail','8','8','mail','/var/mail','/usr/sbin/nologin',],['news','9','9','news','/var/spool/news','/usr/sbin/nologin',],['uucp','10','10','uucp','/var/spool/uucp','/usr/sbin/nologin',],['proxy','13','13','proxy','/bin','/usr/sbin/nologin',],['www-data','33','33','www-data','/var/www','/usr/sbin/nologin',],['backup','34','34','backup','/var/backups','/usr/sbin/nologin',],['list','38','38','Mailing List Manager','/var/list','/usr/sbin/nologin',],['irc','39','39','ircd','/var/run/ircd','/usr/sbin/nologin',],['gnats','41','41','Gnats Bug-Reporting System (admin)','/var/lib/gnats','/usr/sbin/nologin',],['nobody','65534','65534','nobody','/nonexistent','/usr/sbin/nologin',],['_apt','100','65534','','/nonexistent','/usr/sbin/nologin',],['systemd-timesync','101','102','systemd Time Synchronization,,,','/run/systemd','/usr/sbin/nologin',],['systemd-network','102','103','systemd Network Management,,,','/run/systemd','/usr/sbin/nologin',],['systemd-resolve','103','104','systemd Resolver,,,','/run/systemd','/usr/sbin/nologin',],['dnsmasq','104','65534','dnsmasq,,,','/var/lib/misc','/usr/sbin/nologin',],['ntp','105','112','','/nonexistent','/usr/sbin/nologin',],['messagebus','106','113','','/nonexistent','/usr/sbin/nologin',],['tss','107','114','TPM2 software stack,,,','/var/lib/tpm','/bin/false',],['_rpc','108','65534','','/run/rpcbind','/usr/sbin/nologin',],['statd','109','65534','','/var/lib/nfs','/usr/sbin/nologin',],['usbmux','110','46','usbmux daemon,,,','/var/lib/usbmux','/usr/sbin/nologin',],['saned','111','119','','/var/lib/saned','/usr/sbin/nologin',],['nm-openvpn','112','120','NetworkManager OpenVPN,,,','/var/lib/openvpn/chroot','/usr/sbin/nologin',],['hplip','113','7','HPLIP system user,,,','/var/run/hplip','/bin/false',],['colord','114','121','colord colour management daemon,,,','/var/lib/colord','/usr/sbin/nologin',],['nm-openconnect','115','122','NetworkManager OpenConnect plugin,,,','/var/lib/NetworkManager','/usr/sbin/nologin',],['pulse','116','123','PulseAudio daemon,,,','/var/run/pulse','/usr/sbin/nologin',],['avahi','117','126','Avahi mDNS daemon,,,','/var/run/avahi-daemon','/usr/sbin/nologin',],['sddm','118','128','Simple Desktop Display Manager','/var/lib/sddm','/bin/false',],['devrobot','1000','1000','Yesid Rosas Toro','/home/devrobot','/bin/zsh',],['uuidd','119','130','','/run/uuidd','/usr/sbin/nologin',],['sshd','120','65534','','/run/sshd','/usr/sbin/nologin',],['postgres','121','133','PostgreSQL administrator,,,','/var/lib/postgresql','/bin/bash',],['odoo','122','134','','/var/lib/odoo','/usr/sbin/nologin',],
-    ]);
+    data.addRows(values);
 
     var table = new google.visualization.Table(document.getElementById('table_div'));
+
+    google.visualization.events.addListener(table, 'select', function () {
+        console.log(values[table.getSelection()[0].row]);
+    });
 
     table.draw(data, { showRowNumber: true, width: '100%', height: '100%' });
 }
