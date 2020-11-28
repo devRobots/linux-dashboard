@@ -1,6 +1,13 @@
+/*
 setInterval(function refresh() {
-    var modalTag = $('#modalUsuario')[0].className;
-    if (!modalTag.includes("show")) {
+    var modal = $('#modalUsuario')[0];
+    if (modal != undefined) {
+        var modalTag = modal.className;
+        if (!modalTag.includes("show")) {
+            location.reload();
+        }
+    } else {
         location.reload();
     }
 }, 30000);
+*/

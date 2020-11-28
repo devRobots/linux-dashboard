@@ -7,10 +7,10 @@ function drawTable() {
     ]
 
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Nombre');
-    data.addColumn('string', 'Id');
-    data.addColumn('string', 'GroupId');
-    data.addColumn('string', 'descripcion');
+    data.addColumn('string', 'Username');
+    data.addColumn('string', 'User Id');
+    data.addColumn('string', 'Group Id');
+    data.addColumn('string', 'Descripcion');
     data.addColumn('string', 'Home');
     data.addColumn('string', 'Shell');
     data.addRows(values);

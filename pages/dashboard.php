@@ -44,25 +44,39 @@
 					<strong>Uso de RAM</strong>
 				</div>
 				<div class="card-body">
-					<div id="piechart_3d" style="width: 400px; height: 250px;"></div>
+					<div class="row justify-content-center" style="height: 210px; margin-bottom: -50px;">
+						<div id="piechart_3d" style="height: 200px; margin-top: -20px;"></div>
+					</div>
 				</div>
 			</div>
-			<div class="card shadow mb-3">
-				<div class="card-header">
-					<strong>Uso de CPU</strong>
-				</div>
-				<div class="card-body">
-					<div id="chart_div" style="width: 400px; height: 150px;"></div>
-				</div>
-			</div>
-		</div>
-		<div class="card-deck p-md-1">
 			<div class="card mb-3 shadow">
 				<div class="card-header">
 					<strong>Uso de Disco</strong>
 				</div>
 				<div class="card-body">
 					<!--  -->
+				</div>
+			</div>
+		</div>
+		<div class="card-deck p-md-1">
+			<div class="card shadow mb-3">
+				<div class="card-header">
+					<strong>Uso de CPU</strong>
+				</div>
+				<div class="card-body">
+					<div class="container" style="height: 100%;">
+						<div class="row justify-content-md-center" style="height: 100%; margin-bottom: -25px;">
+							<table style="height: 100%;">
+								<tbody>
+									<tr>
+										<td class="align-middle">
+											<div id="chart_div" style="width: 400px; height: 150px;"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="card shadow mb-3">
