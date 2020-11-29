@@ -21,10 +21,11 @@ lista = pro.split("\n")
 for i in range(len(lista)-1):
     linea = lista[i].split(' ')
     salida += "["
-    for j in range(1, len(linea)):
-        salida += "'" + linea[j] + "'"
-        if j < len(linea):
-            salida += ","
+    for j in range(len(linea)):
+        if linea[j].strip():
+            salida += "'" + linea[j] + "'"
+            if j < len(linea) - 1:
+                salida += ","
     salida += "],\n\t\t"
 
 

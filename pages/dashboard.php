@@ -40,40 +40,31 @@
 
 	<!-- Contenedores -->
 	<div class="container py-md-4">
-		<div class="card-deck p-md-1">
-			<div class="card mb-3 shadow">
+		<div class="card-deck p-md-2">
+			<div class="card shadow mb-1">
 				<div class="card-header">
-					<strong>Uso de RAM</strong>
+					<strong>Top Procesos</strong>
 				</div>
 				<div class="card-body">
-					<div class="row justify-content-center" style="height: 210px; margin-bottom: -50px;">
-						<div id="piechart_3d" style="height: 200px; margin-top: -20px;"></div>
-					</div>
-				</div>
-			</div>
-			<div class="card mb-3 shadow">
-				<div class="card-header">
-					<strong>Uso de Disco</strong>
-				</div>
-				<div class="card-body">
-					<!-- uso disk -->
-					<div id="chart_disk" style="width: 900px; height: 500px;"></div>
+					<!-- Tabla de Procesos -->
+					<div id="table_div"></div>
 				</div>
 			</div>
 		</div>
-		<div class="card-deck p-md-1">
-			<div class="card shadow mb-3">
+		<div class="card-deck p-md-2">
+			<div class="card shadow mb-1">
 				<div class="card-header">
 					<strong>Uso de CPU</strong>
 				</div>
 				<div class="card-body">
 					<div class="container" style="height: 100%;">
-						<div class="row justify-content-md-center" style="height: 100%; margin-bottom: -25px;">
+						<div class="row justify-content-md-center" style="height: 100%;">
 							<table style="height: 100%;">
 								<tbody>
 									<tr>
 										<td class="align-middle">
-											<div id="chart_div" style="width: 400px; height: 150px;"></div>
+											<!-- Uso de CPU -->
+											<div id="chart_div" style="width: 360px; height: 150px;"></div>
 										</td>
 									</tr>
 								</tbody>
@@ -82,13 +73,26 @@
 					</div>
 				</div>
 			</div>
-			<div class="card shadow mb-3">
+			<div class="card shadow mb-1">
 				<div class="card-header">
-					<strong>Top Procesos</strong>
+					<strong>Uso de RAM</strong>
 				</div>
 				<div class="card-body">
-					<!-- tabla -->
-					<div id="table_div"></div>
+					<div class="row justify-content-center" style="height: 200px;">
+						<!-- Uso de RAM -->
+						<div id="piechart_3d" style="height: 225px; margin-top: -20px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-deck p-md-2">
+			<div class="card shadow mb-2">
+				<div class="card-header">
+					<strong>Uso de Disco</strong>
+				</div>
+				<div class="card-body">
+					<!-- Uso de Disco -->
+					<div id="chart_disk"></div>
 				</div>
 			</div>
 		</div>
