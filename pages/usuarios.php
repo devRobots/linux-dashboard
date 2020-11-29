@@ -105,6 +105,7 @@
 	<script type="text/javascript" src="../js/update-time.js"></script>
 
 	<!-- Modal -->
+	<form action="../php/editarUsuario.php" method="POST">
 	<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="modalUsuarioLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -115,15 +116,39 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					...
+					<form action="../php/crearUsuario.php">
+						<div class="form-group">
+							<label for="inputUsuario">Nombre de usuario</label>
+							<input readonly type="name" class="form-control form-control-sm" id="inputUsuario" name="inputUsuario">
+						</div>
+						<div class="form-group">
+							<label for="inputContraseña">Contraseña</label>
+							<input type="password" class="form-control form-control-sm" id="inputContraseña" name="inputContraseña">
+						</div>
+						<div class="form-group">
+							<label for="inputDescripcion">Descripcion</label>
+							<input type="textarea" class="form-control form-control-sm" id="inputDescripcion" name="inputDescripcion">
+						</div>
+						<div class="form-group">
+							<label for="inputShell">Shell</label>
+							<select class="form-control form-control-sm" id="inputShell" name="inputShell" required>
+								<option>/bin/bash</option>
+								<option>/bin/sh</option>
+								<option>/bin/false</option>
+							</select>
+						</div>
+					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary">Guardar Cambios</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button type="submit" name="Eliminar" class="btn btn-danger">Eliminar</button>
+					<button type="submit" name="Editar" class="btn btn-primary">Editar</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	</form>
+
 </body>
 
 </html>
