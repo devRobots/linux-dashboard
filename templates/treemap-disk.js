@@ -2,7 +2,8 @@ google.charts.load('current', { 'packages': ['treemap'] });
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+        ['Ubicacion', 'Parent', 'Espacio Disponible', 'Espacio Usado'],
+        ['Disco', null, 0, 0],
         $value_here$
     ]);
 

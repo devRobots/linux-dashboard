@@ -92,7 +92,7 @@
 				</div>
 				<div class="card-body">
 					<!-- Uso de Disco -->
-					<div id="chart_disk"></div>
+					<div id="chart_disk" style="height: 400px;"></div>
 				</div>
 			</div>
 		</div>
