@@ -1,4 +1,3 @@
-/*
 setInterval(function refresh() {
     var modal = $('#modalUsuario')[0];
     if (modal != undefined) {
@@ -10,4 +9,4 @@ setInterval(function refresh() {
         location.reload();
     }
 }, 30000);
-*/
+

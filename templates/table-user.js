@@ -5,7 +5,7 @@ function drawTable() {
     var values = [
         $value_here$
     ]
-    
+
 
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Username');
@@ -23,7 +23,7 @@ function drawTable() {
         document.getElementById("inputUsuario").value = usuario[0]
         document.getElementById("inputDescripcion").value = usuario[3]
         document.getElementById("inputShell").value = usuario[5]
-        console.log(values[table.getSelection()[0].row]);
+
         var modal = $('#modalUsuario');
         modal.modal('show');
         modal.on('hidden.bs.modal', function (e) {
