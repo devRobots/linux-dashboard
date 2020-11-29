@@ -13,6 +13,8 @@
 	<!-- Scripts de Graficas -->
 	<script type="text/javascript" src="../js/donut-ram.js"></script>
 	<script type="text/javascript" src="../js/gauge-cpu.js"></script>
+	<script type="text/javascript" src="../js/treemap-disk.js"></script>
+	<script type="text/javascript" src="../js/table-process.js"></script>
 </head>
 
 <body>
@@ -54,7 +56,8 @@
 					<strong>Uso de Disco</strong>
 				</div>
 				<div class="card-body">
-					<!--  -->
+					<!-- uso disk -->
+					<div id="chart_disk" style="width: 900px; height: 500px;"></div>
 				</div>
 			</div>
 		</div>
@@ -84,7 +87,8 @@
 					<strong>Top Procesos</strong>
 				</div>
 				<div class="card-body">
-					<!--  -->
+					<!-- tabla -->
+					<div id="table_div"></div>
 				</div>
 			</div>
 		</div>
@@ -96,6 +100,8 @@
 	<!-- PHP calls -->
 	<?php exec("sudo ../scripts/ram.py") ?>
 	<?php exec("sudo ../scripts/cpu.py") ?>
+	<?php exec("sudo ../scripts/disk.py") ?>
+	<?php exec("sudo ../scripts/process.py") ?>
 
 	<!-- Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
