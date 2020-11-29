@@ -33,7 +33,7 @@
 				<a class="nav-link" href="usuarios.php">Usuarios</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Acerca de</a>
+				<a class="nav-link" href="about.php">Acerca de</a>
 			</li>
 		</ul>
 	</nav>
@@ -102,10 +102,10 @@
 	</div>
 
 	<!-- PHP calls -->
-	<?php exec("sudo ../scripts/ram.py") ?>
-	<?php exec("sudo ../scripts/cpu.py") ?>
-	<?php exec("sudo ../scripts/disk.py") ?>
-	<?php exec("sudo ../scripts/process.py") ?>
+	<?php exec("../scripts/ram.py") ?>
+	<?php exec("../scripts/cpu.py") ?>
+	<?php exec("../scripts/disk.py") ?>
+	<?php exec("../scripts/process.py") ?>
 
 	<!-- Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

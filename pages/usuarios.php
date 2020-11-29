@@ -30,7 +30,7 @@
 				<a class="nav-link active" href="#">Usuarios</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Acerca de</a>
+				<a class="nav-link" href="about.php">Acerca de</a>
 			</li>
 		</ul>
 	</nav>
@@ -106,47 +106,47 @@
 
 	<!-- Modal -->
 	<form action="../php/editarUsuario.php" method="POST">
-	<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="modalUsuarioLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="modalUsuarioLabel">Detalle</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form action="../php/crearUsuario.php">
-						<div class="form-group">
-							<label for="inputUsuario">Nombre de usuario</label>
-							<input readonly type="name" class="form-control form-control-sm" id="inputUsuario" name="inputUsuario">
-						</div>
-						<div class="form-group">
-							<label for="inputContraseña">Contraseña</label>
-							<input type="password" class="form-control form-control-sm" id="inputContraseña" name="inputContraseña">
-						</div>
-						<div class="form-group">
-							<label for="inputDescripcion">Descripcion</label>
-							<input type="textarea" class="form-control form-control-sm" id="inputDescripcion" name="inputDescripcion">
-						</div>
-						<div class="form-group">
-							<label for="inputShell">Shell</label>
-							<select class="form-control form-control-sm" id="inputShell" name="inputShell" required>
-								<option>/bin/bash</option>
-								<option>/bin/sh</option>
-								<option>/bin/false</option>
-							</select>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-					<button type="submit" name="Eliminar" class="btn btn-danger">Eliminar</button>
-					<button type="submit" name="Editar" class="btn btn-primary">Editar</button>
+		<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="modalUsuarioLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalUsuarioLabel">Detalle</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="../php/crearUsuario.php">
+							<div class="form-group">
+								<label for="inputUsuario">Nombre de usuario</label>
+								<input readonly type="name" class="form-control form-control-sm" id="inputUsuario" name="inputUsuario">
+							</div>
+							<div class="form-group">
+								<label for="inputContraseña">Contraseña</label>
+								<input type="password" class="form-control form-control-sm" id="inputContraseña" name="inputContraseña">
+							</div>
+							<div class="form-group">
+								<label for="inputDescripcion">Descripcion</label>
+								<input type="textarea" class="form-control form-control-sm" id="inputDescripcion" name="inputDescripcion">
+							</div>
+							<div class="form-group">
+								<label for="inputShell">Shell</label>
+								<select class="form-control form-control-sm" id="inputShell" name="inputShell" required>
+									<option>/bin/bash</option>
+									<option>/bin/sh</option>
+									<option>/bin/false</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<button type="submit" name="Eliminar" class="btn btn-danger">Eliminar</button>
+						<button type="submit" name="Editar" class="btn btn-primary">Editar</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</form>
 
 </body>
