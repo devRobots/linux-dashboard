@@ -90,7 +90,7 @@
                                 </div>
                             </li>
                             <li class="media">
-                                <img src="../img/lu.jpg" class="border border-info rounded-circle mr-3" alt="...">
+                                <img src="../img/lu.jpeg" class="border border-info rounded-circle mr-3" alt="...">
                                 <div class="media-body">
                                     <h5 class="mt-0 mb-1">Luisa Fernanda Cotte Sánchez</h5>
                                     Correo electronico:
