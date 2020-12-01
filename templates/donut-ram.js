@@ -7,8 +7,7 @@ function drawChart() {
 	]);
 
 	var options = {
-		is3D: true,
-		pieHole: 0.4,
+		pieHole: 0.3,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));

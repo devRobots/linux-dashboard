@@ -33,6 +33,6 @@ free_avg = (mem_free*100)/mem_total
 used_info = ['Usada: %dk' % mem_used, used_avg]
 free_info = ['Libre: %dk' % mem_free, free_avg]
 
-output = "{0},\n\t\t{1}".format(used_info, free_info)
+output = "{0},\n\t\t{1}".format(free_info, used_info)
 
 graficar("donut-ram.js", output)

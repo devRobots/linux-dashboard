@@ -11,6 +11,7 @@ function drawChart() {
 
     tree.draw(data, {
         minColor: '#0d0',
+	midColor: '#7e8',
         maxColor: '#f00',
         headerHeight: 15,
         fontColor: 'black',
