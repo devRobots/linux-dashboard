@@ -10,9 +10,8 @@ function drawChart() {
     tree = new google.visualization.TreeMap(document.getElementById('chart_disk'));
 
     tree.draw(data, {
-        minColor: '#f00',
-        midColor: '#ddd',
-        maxColor: '#0d0',
+        minColor: '#0d0',
+        maxColor: '#f00',
         headerHeight: 15,
         fontColor: 'black',
         showScale: true
